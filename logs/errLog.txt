@@ -1,1 +1,6 @@
 20230317	14:22:27	39f8e9b2-9b0a-4e6b-9e71-73879ddb7d87	Error:not allowed by CORS
+20230317	17:40:19	b71dc967-ef2d-47fb-804c-3ac224413132	TypeError:res.join is not a function
+20230317	17:42:45	89858508-a188-4e4f-8f8a-939747bd3370	TypeError:data.join is not a function
+20230317	17:43:07	19864449-07b9-4dd2-8c25-b07cea560c93	TypeError:res.join is not a function
+20230317	17:44:24	3645fd82-2bfa-428f-8ba7-445edadb585d	TypeError:res.join is not a function
+20230317	17:48:11	bb75f275-3695-4995-bf39-77b677bc420f	TypeError:res.join is not a function

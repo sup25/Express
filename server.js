@@ -37,53 +37,44 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //serve static files
-app.use(express.static(path.join(__dirname, '/public')))
+app.use('/', express.static(path.join(__dirname, '/public')));
+
+app.use('/subdir', express.static(path.join(__dirname, '/public')));
+
+//routes
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/employees', require('./routes/api/employees'))
 
 
-app.get('/', (req, res) => {
-    //one way to server file
-    //res.sendFile('./views/index.html', { root: __dirname })
-    //another way 
-    res.sendFile(path.join(__dirname, 'views', 'index.html'))
-})
 
-app.get('/new-page(.html)?', (req, res) => {   //making .html optional
 
-    res.sendFile(path.join(__dirname, 'views', 'new-page.html'))
-})
-
-//handle redirect
-app.get('/old-page(.html)?', (req, res) => {
-
-    res.redirect(301, '/new-page.html'); //302 by default, so define 301 in begining of redirect
-})
-
-//Route handlers
-app.get('/hi(.html)?', (req, res, next) => {
-    console.log('attempted to load hi.html')
-    next()
-}, (req, res) => {
-    res.send('Hi mom!');
-})
+// //Route handlers
+// app.get('/hi(.html)?', (req, res, next) => {
+//     console.log('attempted to load hi.html')
+//     next()
+// }, (req, res) => {
+//     res.send('Hi mom!');
+// })
 
 //chaninig route handlers
 
-const one = (req, res, next) => {
-    console.log('one')
-    next();
-}
-const two = (req, res, next) => {
-    console.log('two')
-    next();
-}
-const three = (req, res) => {
-    console.log('three')
-    res.send('Finished')
-}
+// const one = (req, res, next) => {
+//     console.log('one')
+//     next();
+// }
+// const two = (req, res, next) => {
+//     console.log('two')
+//     next();
+// }
+// const three = (req, res) => {
+//     console.log('three')
+//     res.send('Finished')
+// }
 
-app.get('/chain(.html)?', [one, two, three]);
+// app.get('/chain(.html)?', [one, two, three]);
 
-//app.use doesnot use Regex it is for middleware
+//app.use supports Regex
 //app.all use Regex, used more for routing 
 
 app.all('*', (req, res) => { //put in 404 because we have 404 file(404.html) that means it sends 200 status code which is correct 
