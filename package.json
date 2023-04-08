@@ -1,5 +1,5 @@
 {
-  "name": "10tut",
+  "name": "tut",
   "version": "1.0.0",
   "description": "Express tutorial",
   "main": "server.js",
@@ -7,13 +7,16 @@
     "start": "node server",
     "dev": "nodemon server"
   },
-  "author": "Dave Gray",
+  "author": "sup",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "date-fns": "^2.23.0",
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
