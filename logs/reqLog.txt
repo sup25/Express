@@ -104,3 +104,4 @@
 20230318	18:28:25	6b4bc29a-605c-41fd-a2ab-6e7d4bb58848	GET	undefined	/employees/
 20230318	18:28:45	9e13dcc1-19ee-46d4-90e0-e5f54d5bc61a	POST	undefined	/employees
 20230318	18:28:54	ddb37fbe-b033-467d-adf5-81cc1f348990	DELETE	undefined	/employees
+20230408	14:35:28	db479188-8547-4d09-b38d-337634d18c69	POST	undefined	/register
