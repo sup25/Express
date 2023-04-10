@@ -11,3 +11,6 @@
 20230318	18:25:39	9baca8f8-e65d-47b6-a18f-34bd39257bb3	TypeError:data.setEmployees is not a function
 20230318	18:26:31	f7a1c6e2-c96d-4f0f-99fb-41c42e397564	TypeError:data.setEmployees is not a function
 20230408	19:07:51	747c0375-b9ab-4281-8f0b-fe9d9add1f03	TypeError: res.join is not a function
+20230410	19:04:18	75d33814-bb5e-4ba9-a3fe-9566f12457f4	TypeError: Cannot read properties of undefined (reading 'username')
+20230410	19:05:36	13e4d0d4-96ba-47af-a66b-df53b1f0a69c	TypeError: Cannot read properties of undefined (reading 'username')
+20230410	19:06:33	bcffdb9e-e9ce-4384-aa6d-0f3d1bdede12	TypeError: Cannot read properties of undefined (reading 'username')
